@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ProgressBar
+        android:id="@+id/pb_demo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:visibility="visible"
+        android:max="10"
+        android:progress="0"/>
+    
+    <Button
+        android:id="@+id/btn_sans_thread"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/pb_demo"
+        android:text="Go sans Thread"
+        android:onClick="onClickSansThread"/>
+
+    <Button
+        android:id="@+id/btn_avec_thread"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btn_sans_thread"
+        android:text="Go avec Thread"
+        android:onClick="onClickAvecThread"/>
+
+    <Button
+        android:id="@+id/btn_avec_asynctask"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btn_avec_thread"
+        android:text="Go avec AsyncTask"
+        android:onClick="onClickAvecAsyncTask"/>
+    
+    <Button
+        android:id="@+id/btn_avec_handler"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btn_avec_asynctask"
+        android:text="Go avec Handler"
+        android:onClick="onClickAvecHandler"/>
+
+
+
+
+
+
+</RelativeLayout>
